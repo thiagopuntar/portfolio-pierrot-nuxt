@@ -1,6 +1,11 @@
 {
   "name": "nuxt-app",
   "private": true,
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -22,5 +27,10 @@
     "lint-staged": "^14.0.1",
     "nuxt": "^3.6.5",
     "prettier": "^3.0.2"
+  },
+  "dependencies": {
+    "@sanity/client": "^6.4.9",
+    "@sanity/image-url": "^1.0.2",
+    "sanity-blocks-vue-component": "^1.0.1"
   }
 }
