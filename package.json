@@ -20,6 +20,8 @@
   "devDependencies": {
     "@babel/core": "^7.22.11",
     "@babel/eslint-parser": "^7.22.11",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@nuxt/devtools": "latest",
     "@types/node": "^18.17.3",
     "eslint": "^8.48.0",
