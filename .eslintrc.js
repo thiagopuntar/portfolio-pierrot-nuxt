@@ -13,6 +13,6 @@ module.exports = {
     requireConfigFile: false,
   },
   rules: {
-    // Your custom rules here
+    'no-undef': 'off',
   },
 };
