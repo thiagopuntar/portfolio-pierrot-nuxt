@@ -21,7 +21,11 @@
     "@babel/core": "^7.22.11",
     "@babel/eslint-parser": "^7.22.11",
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@types/node": "^18.17.3",
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "@typescript-eslint/parser": "^6.5.0",
+    "babel-eslint": "^10.1.0",
     "eslint": "^8.48.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -30,9 +34,11 @@
     "husky": "^8.0.0",
     "lint-staged": "^14.0.1",
     "nuxt": "^3.6.5",
-    "prettier": "^3.0.2"
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
+    "@nuxtjs/sanity": "^1.8.1",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@sanity/client": "^6.4.9",
     "@sanity/image-url": "^1.0.2",
