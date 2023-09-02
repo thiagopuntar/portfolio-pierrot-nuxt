@@ -1,4 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* --primary-05: #dccfe9; */
+  /* --primary-04: #8300e9; */
+  /* --primary-03: #430c79; */
+  /* --primary-02: #451971; */
+  /* --primary-01: #290d44; */
+
+  /* --secondary-05: #f8f3ca; */
+  /* --secondary-04: #f1e9a0; */
+  /* --secondary-03: #c9ba2f; */
+  /* --secondary-02: #f8d350; */
+  /* --secondary-01: #d29c0a; */
+
+  /* --white-06: #fbfbf7; */
+  /* --white-05: #fffffc; */
+  /* --white-04: #fafafa; */
+  /* --white-03: #fcfcfc; */
+  /* --white-02: #efefff; */
+  /* --white-01: #edf1f6; */
+
+  /* --black-04: #5b5e6e; */
+  /* --black-03: #323649; */
+  /* --black-02: #444444; */
+  /* --black-01: #211d28; */
+
+  /* --success-02: #a9ff80; */
+  /* --success-01: #8ef35e; */
+
+  /* --alert-01: #4cc6fb; */
+
+  /* --danger-02: #f16161; */
+  /* --danger-01: #ff8080; */
+}
+
 body {
   font-family: 'Poppins', sans-serif;
 }
