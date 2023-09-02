@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: ['./**/*.vue'],
   theme: {
@@ -8,43 +9,43 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          '05': '#DCCFE9',
-          '04': '#8300E9',
-          '03': '#430C79',
-          '02': '#451971',
-          '01': '#290D44',
+          '05': 'var(--primary-05)',
+          '04': 'var(--primary-04)',
+          '03': 'var(--primary-03)',
+          '02': 'var(--primary-02)',
+          '01': 'var(--primary-01)',
         },
         secondary: {
-          '05': '#F8F3CA',
-          '04': '#F1E9A0',
-          '03': '#C9BA2F',
-          '02': '#F8D350',
-          '01': '#D29C0A',
+          '05': 'var(--secondary-05)',
+          '04': 'var(--secondary-04)',
+          '03': 'var(--secondary-03)',
+          '02': 'var(--secondary-02)',
+          '01': 'var(--secondary-01)',
         },
         white: {
-          '06': '#FBFBF7',
-          '05': '#FFFFFC',
-          '04': '#FAFAFA',
-          '03': '#FCFCFC',
-          '02': '#EFEFFF',
-          '01': '#EDF1F6',
+          '06': 'var(--white-06)',
+          '05': 'var(--white-05)',
+          '04': 'var(--white-04)',
+          '03': 'var(--white-03)',
+          '02': 'var(--white-02)',
+          '01': 'var(--white-01)',
         },
         black: {
-          '04': '#5B5E6E',
-          '03': '#323649',
-          '02': '#444444',
-          '01': '#211D28',
+          '04': 'var(--black-04)',
+          '03': 'var(--black-03)',
+          '02': 'var(--black-02)',
+          '01': 'var(--black-01)',
         },
         success: {
-          '02': '#A9FF80',
-          '01': '#8EF35E',
+          '02': 'var(--success-02)',
+          '01': 'var(--success-01)',
         },
         alert: {
-          '01': '#4CC6FB',
+          '01': 'var(--alert-01)',
         },
         danger: {
-          '02': '#F16161',
-          '01': '#FF8080',
+          '02': 'var(--danger-02)',
+          '01': 'var(--danger-01)',
         },
       },
     },
