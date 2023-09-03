@@ -1,6 +1,6 @@
 <script setup>
-const [headerProps] = await useComponentProps('header');
-console.log(headerProps);
+const [data] = defineProps(['data']);
+console.log(">>> I'm on header", data);
 </script>
 
 <template>
