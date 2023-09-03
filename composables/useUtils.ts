@@ -5,7 +5,7 @@ export const useUtils = () => {
     retryCount: number = 3
   ): Promise<any> => {
     return new Promise(async (resolve, reject) => {
-      let data = null;
+      let data;
       for (let i = 0; i < retryCount; i++) {
         try {
           const response = await sanity.fetch(query);
@@ -18,7 +18,7 @@ export const useUtils = () => {
         }
       }
 
-      if (data !== null) {
+      if (data) {
         resolve(data);
       } else {
         reject(new Error(`Failed to fetch data after ${retryCount} retries`));
