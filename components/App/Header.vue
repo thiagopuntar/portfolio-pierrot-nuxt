@@ -13,7 +13,7 @@ const data = defineProps({
 });
 
 const headerProps = toRaw(data).data;
-const windowWidth = ref(0);
+const windowWidth = ref();
 
 onMounted(() => {
   window.addEventListener('resize', () => {
