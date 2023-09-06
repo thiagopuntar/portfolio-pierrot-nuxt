@@ -11,7 +11,7 @@ const toggleMenu = () => {
 };
 
 const commonStyles =
-  'bg-black-02 h-[2px] w-[17px] rounded-full transform transition-all duration-300';
+  'bg-black-02 h-[2px] w-[17px] rounded-full origin-center transition-all duration-300';
 </script>
 <template>
   <div class="absolute right-5">
@@ -26,13 +26,13 @@ const commonStyles =
     >
       <span
         :class="`${commonStyles} ${
-          isMenuOpen ? 'rotate-45 translate-y-1' : ''
+          isMenuOpen ? 'origin-center rotate-45 translate-y-1' : ''
         }`"
       ></span>
       <span :class="`${commonStyles} ${isMenuOpen ? 'opacity-0' : ''}`"></span>
       <span
         :class="`${commonStyles} ${
-          isMenuOpen ? '-rotate-45 translate-y-[-1px]' : ''
+          isMenuOpen ? 'origin-center -rotate-45 translate-y-[-1px]' : ''
         }`"
       ></span>
     </button>
@@ -40,14 +40,11 @@ const commonStyles =
       :class="{ hidden: !isMenuOpen }"
       class="md:flex md:items-center md:space-x-6 fixed right-5 bg-white-05 p-5 top-16"
     >
-      <div v-for="item in menuItems" :key="item._key">
-        <NuxtLink
-          :to="item.linkRedirection"
-          class="block mt-4 md:inline-block md:mt-0 cursor-pointer text-lg font-semibold text-primary-01 hover:text-secondary-01"
-        >
-          {{ item.name }}
-        </NuxtLink>
-      </div>
+      <ul>
+        <li v-for="item in menuItems" :key="item._key">
+          <MenuItem :item="item" />
+        </li>
+      </ul>
     </div>
   </div>
 </template>
