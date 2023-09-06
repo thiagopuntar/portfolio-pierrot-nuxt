@@ -1,6 +1,25 @@
 <script setup>
-const [data] = defineProps(['data']);
-console.log(">>> I'm on header", data);
+const data = defineProps({
+  data: {
+    color: Array,
+    _createdAt: String,
+    _rev: String,
+    _type: String,
+    name: String,
+    header: Object,
+    _id: String,
+    _updatedAt: String,
+  },
+});
+
+const headerProps = toRaw(data).data;
+const windowWidth = ref(0);
+
+onMounted(() => {
+  window.addEventListener('resize', () => {
+    windowWidth.value = window.innerWidth;
+  });
+});
 </script>
 
 <template>
@@ -10,11 +29,13 @@ console.log(">>> I'm on header", data);
         <nuxt-link to="/" class="cursor-pointer">
           <div class="w-12 h-12">
             <SanityImage
-              :asset-id="headerProps.logo.asset._ref"
+              :asset-id="headerProps?.logo?.asset?._ref"
               auto="format"
             />
           </div>
         </nuxt-link>
+        <AppHamburguerMenu v-if="windowWidth < 758" :data="headerProps?.menu" />
+        <AppMenu v-else :data="headerProps?.menu" />
       </nav>
     </div>
     <div

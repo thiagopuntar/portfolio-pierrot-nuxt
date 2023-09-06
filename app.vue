@@ -1,26 +1,21 @@
 <script setup lang="ts">
 const query = groq`*[_type == "pageConfig"]`;
 const sanity = useSanity();
-const otherValue = await sanity.fetch(query);
-const pageData = otherValue;
-// const [config] = pageData;
-console.log('>>> ', pageData);
-// console.log(">>> ", config)
+const [pageData] = await sanity.fetch<any[]>(query);
 
 onMounted(() => {
-  // const { data: pageConfigData } = useSanityQuery(query);
-  // const [pageConfig] = pageConfigData.value;
-  // const root = document.documentElement;
-  // pageConfig.color.forEach((color: string) => {
-  //   const { name, value } = color;
-  //   root.style.setProperty(`--${name}`, value);
-  // });
+  const root = document.documentElement;
+  pageData?.color?.forEach((color: any) => {
+    const { name, value } = color;
+    console.log(name, value);
+    root.style.setProperty(`--${name}`, value);
+  });
 });
 </script>
 
 <template>
   <div>
-    <!-- <AppHeader :data="pageConfig.header" /> -->
+    <AppHeader :data="pageData.header" />
     <NuxtPage />
   </div>
 </template>
