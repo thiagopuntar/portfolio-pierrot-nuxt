@@ -34,8 +34,8 @@ onMounted(() => {
             />
           </div>
         </nuxt-link>
-        <AppHamburguerMenu v-if="windowWidth < 758" :data="headerProps?.menu" />
-        <AppMenu v-else :data="headerProps?.menu" />
+        <AppHamburguerMenu :data="headerProps?.menu" />
+        <AppMenu :data="headerProps?.menu" />
       </nav>
     </div>
     <div

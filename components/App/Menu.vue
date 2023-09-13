@@ -2,10 +2,16 @@
 const data = defineProps({
   data: Object,
 });
+
 const menuItems = toRaw(data).data;
+
+// const onHoverMenuItemParent = () => {
+
+// }
 </script>
+
 <template>
-  <div class="flex gap-20">
+  <div class="hidden md:flex gap-20">
     <div v-for="item in menuItems" :key="item._key">
       <NuxtLink
         :to="item.linkRedirection"

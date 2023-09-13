@@ -14,7 +14,7 @@ const commonStyles =
   'bg-black-02 h-[2px] w-[17px] rounded-full origin-center transition-all duration-300';
 </script>
 <template>
-  <div class="absolute right-5">
+  <div class="md:hidden absolute right-5">
     <button
       class="block md:hidden"
       :class="

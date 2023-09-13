@@ -1,10 +1,4 @@
 <script setup lang="ts">
-interface IMenuItem {
-  name: string;
-  linkRedirection: string;
-  subMenu?: IMenuItem[];
-}
-
 const { item } = defineProps({
   item: { type: Object as PropType<IMenuItem>, required: true },
 });
