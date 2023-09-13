@@ -26,13 +26,13 @@ const commonStyles =
     >
       <span
         :class="`${commonStyles} ${
-          isMenuOpen ? 'origin-center rotate-45 translate-y-1' : ''
+          isMenuOpen ? 'origin-top rotate-45 translate-y-1' : ''
         }`"
       ></span>
       <span :class="`${commonStyles} ${isMenuOpen ? 'opacity-0' : ''}`"></span>
       <span
         :class="`${commonStyles} ${
-          isMenuOpen ? 'origin-center -rotate-45 translate-y-[-1px]' : ''
+          isMenuOpen ? 'origin-bottom -rotate-45 translate-y-[-1px]' : ''
         }`"
       ></span>
     </button>
